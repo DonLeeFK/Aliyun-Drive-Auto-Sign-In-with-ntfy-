@@ -13,7 +13,7 @@ SIGN_LOG_FILE = os.path.join(work_path, SIGN_LOG)
 logger.add(SIGN_LOG_FILE, encoding='utf8')
 
 # 请在阿里云盘网页端获取：JSON.parse(localStorage.getItem("token")).refresh_token
-with open("refreshToken", "r") as f:
+with open(work_path+"/refreshToken", "r") as f:
     refresh_token = f.readline()
 
 if refresh_token is None:
